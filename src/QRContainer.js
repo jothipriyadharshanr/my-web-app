@@ -6,7 +6,7 @@ class QRContainer extends Component {
     super(props)
     this.state = {
       delay: 100,
-      facingMode: 'user',
+      facingMode: 'environment',
       result: 'Hold QR code to scan',
     }
 
