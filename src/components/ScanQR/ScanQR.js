@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import QrReader from 'react-qr-reader'
 
-class QRContainer extends Component {
+class ScanQR extends Component {
   constructor(props){
     super(props)
     this.state = {
@@ -15,11 +15,16 @@ class QRContainer extends Component {
   handleScan(result){
     if(result){
       this.setState({ result })
+      this.handleClick()
     }
+  }
+  handleClick() {
+    this.props.history.push('/selectcard');
   }
   handleError(err){
     console.error(err)
   }
+
   render(){
     const previewStyle = {
       height: 300,
@@ -55,4 +60,4 @@ class QRContainer extends Component {
     )
   }
 }
-export default QRContainer;
+export default ScanQR;
