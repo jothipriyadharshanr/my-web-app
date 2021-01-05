@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react'
+import QrReader from 'react-qr-reader'
 
 function App() {
   return (
