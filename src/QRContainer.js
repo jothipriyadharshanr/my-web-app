@@ -7,7 +7,7 @@ class QRContainer extends Component {
     this.state = {
       delay: 100,
       facingMode: 'environment',
-      result: 'Hold QR code to scan',
+      result: 'No result',
     }
 
     this.handleScan = this.handleScan.bind(this)
@@ -22,20 +22,20 @@ class QRContainer extends Component {
   }
   render(){
     const previewStyle = {
-      height: 240,
-      width: 320,
+      height: 300,
+      width: 300,
       display: 'flex',
       "justify-content" : "center"
     }
     const camStyle = {
     	display: 'flex',
     	"justify-content": "center",
-    	marginTop: '-50px'
+    	marginTop: '-20px'
     }
     const textStyle = {
-    	fontSize: '30px',
+    	fontSize: '15px',
     	"text-align": 'center',
-    	marginTop: '-50px'
+    	marginBottom: '1000px'
     }
     return(
     	<React.Fragment>
@@ -47,10 +47,10 @@ class QRContainer extends Component {
           			onScan={this.handleScan}
           			facingMode={this.state.facingMode}
           		/>
+          	</div>
         	<p style= {textStyle}>
         		{this.state.result}
         	</p>
-      		</div>
       	</React.Fragment>
     )
   }
