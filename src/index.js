@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 
 import Home from './components/Home/Home';
 import ScanQR from './components/ScanQR/ScanQR';

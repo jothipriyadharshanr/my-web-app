@@ -9,8 +9,7 @@ class Button extends Component {
   handleClick() {
     console.log("Working")
     //this.props.history.push('/scanqr');
-    history.replace('/scanqr');
-    window.location.reload();
+    history.push('/scanqr');
   }
   render() {
   	const buttonStyle = {
