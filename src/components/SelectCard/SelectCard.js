@@ -1,5 +1,15 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-export default function SelectCard() {
-  return <h2>SelectCard Page</h2>;
+class SelectCard extends Component{
+    value="Value From Parent";
+    render(){
+    	const { data } = this.props.location
+        return(
+            <div>
+            	<h2>SelectCard Page</h2>
+            	<p>{data}</p>
+            </div>
+        );
+    }
 }
+export default SelectCard;

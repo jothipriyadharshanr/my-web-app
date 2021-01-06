@@ -19,7 +19,11 @@ class ScanQR extends Component {
     }
   }
   handleClick() {
-    this.props.history.push('/selectcard');
+    console.log(this.state.result);
+    this.props.history.push({
+      pathname: '/selectcard',
+      data: this.state.result // your data array of objects
+    });
   }
   handleError(err){
     console.error(err)
@@ -27,20 +31,15 @@ class ScanQR extends Component {
 
   render(){
     const previewStyle = {
-      height: 300,
-      width: 300,
       display: 'flex',
-      "justify-content" : "center"
+      "justify-content" : "center",
+      minHeight: "100%",
+      minWidth: "100%"
     }
     const camStyle = {
     	display: 'flex',
     	"justify-content": "center",
-    	marginTop: '-20px'
-    }
-    const textStyle = {
-    	fontSize: '15px',
-    	"text-align": 'center',
-    	marginBottom: '1000px'
+      minHeight: "100vh",
     }
     return(
     	<React.Fragment>
@@ -53,9 +52,6 @@ class ScanQR extends Component {
           			facingMode={this.state.facingMode}
           		/>
           	</div>
-        	<p style= {textStyle}>
-        		{this.state.result}
-        	</p>
       	</React.Fragment>
     )
   }
